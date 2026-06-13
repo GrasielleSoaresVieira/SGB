@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGB - Sistema de Gerenciamento da Biblioteca</title>
+
+    <link rel="stylesheet" href="C:\Users\grasi\Desktop\SGB\styles.css">
+
+  
+</head>
+<body>
+
+    <section id="homeScreen" class="screen active">
+
+        <img src="logo.png" class="logo">
+
+        <div class="overlay"></div>
+
+        <div class="content">
+
+            <p class="welcome">
+                Bem-vindos ao
+            </p>
+
+            <h1 class="title">
+                SGB
+            </h1>
+
+            <h2 class="subtitle">
+                Sistema de Gerenciamento da Biblioteca
+            </h2>
+
+            <button id="btnStart" class="btn-primary">
+                INICIAR
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="loginScreen" class="screen">
+<img src="ju.png" alt="Bibliotecária" class="personagem">
+        <img src="logo.png" class="logo">
+       <a href="#" class="home-link">
+    <img src="home.png" class="home" alt="Home">
+</a>
+        <div class="home-btn">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div class="card">
+
+            <h1>LOGIN</h1>
+
+            <label>Usuário ou Matrícula</label>
+
+            <input
+                type="text"
+                id="loginUser"
+                placeholder="Digite seu usuário"
+            >
+
+            <label>Senha</label>
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Digite sua senha"
+            >
+
+            <button id="btnLogin">
+                Entrar
+            </button>
+
+            <p class="register-link">
+
+                Não tem uma conta ainda?
+
+                <span id="openRegister">
+                    Cadastre-se
+                </span>
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="registerScreen" class="screen">
+
+        <img src="logo.png" class="logo">
+        <a href="#" class="home-link">
+    <img src="home.png" class="home" alt="Home">
+</a>
+
+        <div class="home-btn">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div class="register-container">
+
+            <h1>Criar sua Conta</h1>
+
+            <div class="form-grid">
+
+                <div>
+
+                    <label>Nome Completo</label>
+                    <input type="text" id="name">
+
+                    <label>Email</label>
+                    <input type="email" id="email">
+
+                    <label>Matrícula</label>
+                    <input type="text" id="matricula">
+
+                    <label>Telefone</label>
+                    <input type="text" id="telefone">
+
+                </div>
+
+                <div>
+
+                    <label>Endereço</label>
+                    <input type="text" id="endereco">
+
+                    <label>Bairro</label>
+                    <input type="text" id="bairro">
+
+                    <label>Número</label>
+                    <input type="text" id="numero">
+
+                    <label>Turma</label>
+                    <input type="text" id="turma">
+
+                </div>
+
+            </div>
+
+            <div class="password-wrapper">
+            <label>Senha</label>
+            <input type="password" id="password">
+            </div>
+
+            <button id="btnRegister">
+                Cadastrar
+            </button>
+
+        </div>
+
+    </section>
+   
+    <section id="menuScreen" class="screen">
+<img src="ju.png" alt="Bibliotecária" class="personagem">
+        <img src="logo.png" class="logo">
+   <a href="#" class="home-link">
+    <img src="home.png" class="home" alt="Home">
+</a>
+
+
+        <div class="home-btn">
+            <i class="fa-solid fa-house"></i>
+        </div>
+
+        <div class="menu-container">
+
+            <div class="greeting">
+
+                <h1 id="userGreeting">
+                    Olá Usuário!
+                </h1>
+
+            </div>
+
+            <h2>Você deseja:</h2>
+
+ <div class="menu-buttons">
+                <button id="openBookRegister">
+                Cadastrar Livros
+                </button>
+
+               <button id="openPublisherRegister">
+               Cadastrar Editoras
+               </button>
+
+                <button id="openLoansScreen">
+                  Empréstimos
+                </button>
+                <div class="search-area">
+                    <input type="text" id="globalSearch" placeholder="Pesquisar livros, editoras ou usuários...">
+                    <div id="searchResults" class="search-results"></div>
+                </div>
+
+            <button id="openRentBook">
+               Alugar Livro
+                 </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<section id="bookRegisterScreen" class="screen">
+
+    <img src="logo.png" class="logo">
+<a href="#" class="home-link">
+    <img src="home.png" class="home" alt="Home">
+</a>
+
+
+    <div class="home-btn">
+        <i class="fa-solid fa-house"></i>
+    </div>
+
+    <div class="book-container">
+
+        <h1>Cadastro de Livros</h1>
+
+        <div class="book-grid">
+
+            <div>
+
+                <label>Título</label>
+                <input type="text" id="bookTitle">
+
+                <label>Editora</label>
+                <input type="text" id="bookPublisher">
+
+                <label>Ano de Publicação</label>
+                <input type="text" id="bookYear">
+
+            </div>
+
+            <div>
+
+                <label>Autor</label>
+                <input type="text" id="bookAuthor">
+
+                <label>Gênero</label>
+                <input type="text" id="bookGenre">
+
+              <label>ISBN</label>
+                <input type="text" id="bookGenre">
+            </div>
+
+        </div>
+
+        <button id="btnSaveBook">
+            Cadastrar Livro
+        </button>
+
+    </div>
+
+</section>
+
+
+<section id="publisherRegisterScreen" class="screen">
+      <img src="logo.png" class="logo">
+     <a href="#" class="home-link">
+    <img src="home.png" class="home" alt="Home">
+</a>
+    <div class="publisher-container">
+
+        <h1>Cadastro de Editoras</h1>
+
+        <div class="publisher-grid">
+
+            <div>
+
+                <label>Nome da Editora</label>
+                <input type="text" id="publisherName">
+
+                <label>E-mail</label>
+                <input type="email" id="publisherEmail">
+
+            </div>
+
+            <div>
+
+                <label>Telefone</label>
+                <input type="text" id="publisherPhone">
+
+                <label>Responsável</label>
+                <input type="text" id="publisherManager">
+
+            </div>
+
+        </div>
+
+        <button id="btnSavePublisher">
+            Cadastrar Editora
+        </button>
+
+    </div>
+
+</section>
+<section id="editorasScreen" class="screen">
+
+    <img src="logo.png" class="logo">
+
+    <a href="#" class="home-link">
+        <img src="home.png" class="home" alt="Home">
+    </a>
+
+    <div class="editoras-container">
+
+        <div class="editoras-topo">
+
+            <input
+                type="text"
+                id="pesquisaEditora"
+                placeholder="Pesquisar por editora"
+            >
+
+            <h1>Editoras</h1>
+
+        </div>
+
+        <div class="editoras-lista" id="listaEditoras">
+
+            <div class="editora-item">
+              
+                <div class="nome-editora">DarkSide</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+            <div class="editora-item">
+                
+                <div class="nome-editora">Globo Livros</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+            <div class="editora-item">
+               
+                <div class="nome-editora">Rocco</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+            <div class="editora-item">
+                
+                <div class="nome-editora">Saraiva</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+            <div class="editora-item">
+                
+                <div class="nome-editora">Zahar</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="usuariosScreen" class="screen">
+
+    <img src="logo.png" class="logo">
+
+    <a href="#" class="home-link">
+        <img src="home.png" class="home" alt="Home">
+    </a>
+
+    <div class="usuarios-container">
+
+        <div class="usuarios-topo">
+
+            <input
+                type="text"
+                id="pesquisaUsuario"
+                placeholder="Pesquisar por usuário"
+            >
+
+            <h1>Usuários</h1>
+
+        </div>
+
+        <div class="usuarios-lista" id="listaUsuarios">
+
+            <div class="usuario-item">
+                
+                <div class="nome-usuario">Ana Beatriz Oliveira Santos</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+            <div class="usuario-item">
+                
+                <div class="nome-usuario">Bruno Henrrique Costa Lima</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+            <div class="usuario-item">
+               
+                <div class="nome-usuario">Carlos Eduardo Ferreira Sousa</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+            <div class="usuario-item">
+                
+                <div class="nome-usuario">Daniela Martins Rodrigues</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+            <div class="usuario-item">
+             
+                <div class="nome-usuario">Eduardo Almeida Pereira</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="livrosScreen" class="screen">
+
+    <img src="logo.png" class="logo">
+
+    <a href="#" class="home-link">
+        <img src="home.png" class="home" alt="Home">
+    </a>
+
+    <div class="livros-container">
+
+        <div class="livros-topo">
+
+            <input
+                type="text"
+                id="pesquisaLivro"
+                placeholder="Pesquisar por livro"
+            >
+
+            <h1>Livros</h1>
+
+        </div>
+
+        <div class="livros-lista" id="listaLivros">
+
+            <div class="livro-item">
+                
+                <div class="nome-livro">Biologia Moderna</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+             <div class="livro-item">
+                
+                <div class="nome-livro">Física Clássica</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+            <div class="livro-item">
+                
+                <div class="nome-livro">Geografia Geral</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+            <div class="livro-item">
+               
+                <div class="nome-livro">História Integrada</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+            <div class="livro-item">
+             
+                <div class="nome-livro">Matemática vol2</div>
+                <button class="btn-opcoes">⋮</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="rentBookScreen" class="screen">
+
+    <img src="logo.png" class="logo">
+<a href="#" class="home-link">
+    <img src="home.png" class="home" alt="Home">
+</a>
+    <div class="home-btn">
+        <i class="fa-solid fa-house"></i>
+    </div>
+
+    <div class="rent-container">
+
+        <div class="rent-header">
+
+            <h1>Selecione o livro</h1>
+
+            <input
+                type="text"
+                id="bookSearch"
+                placeholder="Pesquisar livro..."
+            >
+
+        </div>
+
+        <div class="rent-categories">
+
+            <button data-category="Fantasia">Fantasia</button>
+            <button data-category="Drama">Drama</button>
+            <button data-category="Infantil">Infantil</button>
+            <button data-category="Romance">Romance</button>
+
+        </div>
+
+        <div id="booksList" class="books-list">
+
+        </div>
+
+        <button id="btnRentBook" class="btn-rent">
+            Alugar
+        </button>
+
+    </div>
+
+
+</section>
+
+
+<section id="loansScreen" class="screen">
+
+    <img src="logo.png" class="logo">
+<a href="#" class="home-link">
+    <img src="home.png" class="home" alt="Home">
+</a>
+    <div class="home-btn">
+        <i class="fa-solid fa-house"></i>
+    </div>
+
+    <div class="loans-container">
+
+        <div class="loans-header">
+
+            <input
+                type="text"
+                id="loanSearch"
+                placeholder="Pesquisar empréstimos..."
+            >
+
+        </div>
+
+        <div class="table-wrapper">
+
+            <table id="loansTable">
+
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Data Empréstimo</th>
+                        <th>Data Devolução</th>
+                        <th>Livro</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="loansTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+ 
+
+<script src="C:\Users\grasi\Desktop\SGB\script.js"></script>
+   
+
+<button id="backButton" class="back-button" title="Voltar">←</button>
+</body>
+
+</html>
